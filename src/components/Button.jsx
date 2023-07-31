@@ -9,13 +9,18 @@ const Button = ({
   border,
   textColor,
   iconPosition,
+  hover,
 }) => {
   return (
     <button
       className={
-        border
+        hover
+          ? border
+            ? `${shadowStatus} ${weight} ${color} ${height} rounded-md  border ${border} text-center ${textColor} text-sm font-medium`
+            : `${shadowStatus} ${weight} ${color} ${height} rounded-md text-center ${textColor} text-sm font-medium ${hover} `
+          : border
           ? `${shadowStatus} ${weight} ${color} ${height} rounded-md  border ${border} text-center ${textColor} text-sm font-medium`
-          : `${shadowStatus} ${weight} ${color} ${height} rounded-md text-center ${textColor} text-sm font-medium`
+          : `${shadowStatus} ${weight} ${color} ${height} rounded-md text-center ${textColor} text-sm font-medium `
       }
       disabled={isDisabled}
     >
