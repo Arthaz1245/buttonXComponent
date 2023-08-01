@@ -1,4 +1,4 @@
-import Button from "./components/button";
+import Button from "./components/Button";
 import { AiFillBehanceCircle, AiOutlineDropbox } from "react-icons/ai";
 function App() {
   return (
