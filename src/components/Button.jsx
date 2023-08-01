@@ -24,18 +24,17 @@ const Button = ({
       }
       disabled={isDisabled}
     >
-      {icon ? (
-        <div
-          className={
-            iconPosition === "right"
-              ? `w-4 h-4 relative flex-col justify-start items-start inline-flex`
-              : `w-4 h-4 relative flex-col justify-end items-end inline-flex `
-          }
-        >
+      {icon && iconPosition === "left" && (
+        <div className="w-4 h-4 relative flex-col justify-start items-start inline-flex mr-2">
           {icon}
         </div>
-      ) : null}
+      )}
       {text}
+      {icon && iconPosition !== "left" && (
+        <div className="w-4 h-4 relative flex-col justify-start items-start inline-flex ml-2">
+          {icon}
+        </div>
+      )}
     </button>
   );
 };

@@ -1,5 +1,5 @@
 import Button from "./components/button";
-import { AiFillBehanceCircle } from "react-icons/ai";
+import { AiFillBehanceCircle, AiOutlineDropbox } from "react-icons/ai";
 function App() {
   return (
     <>
@@ -118,6 +118,9 @@ function App() {
               height="h-9"
             />
           </div>
+          <div className="text-[#000]  font-normal text-lg mx-24">
+            Button disabled
+          </div>
           <div className="flex flex-row w-[50%] justify-around my-28">
             <Button
               text="Disabled"
@@ -139,7 +142,10 @@ function App() {
               iconPosition="left"
             />
           </div>
-          <div className="flex flex-row w-[50%] justify-around my-28">
+          <div className="text-[#000]  font-normal text-lg mx-24">
+            AiFillBehanceCircle && AiOutlineDropbox
+          </div>
+          <div className="flex flex-row w-[100%] justify-around my-28">
             <Button
               text="Default"
               textColor="text-white"
@@ -148,7 +154,7 @@ function App() {
               color="bg-blue-600"
               weight="w-[105px]"
               height="h-9"
-              icon={<AiFillBehanceCircle />}
+              icon={<AiFillBehanceCircle className="mr-2" />}
               iconPosition="right"
             />
             <Button
@@ -159,7 +165,29 @@ function App() {
               color="bg-blue-600"
               weight="w-[105px]"
               height="h-9"
-              icon={<AiFillBehanceCircle />}
+              icon={<AiFillBehanceCircle className="ml-2" />}
+              iconPosition="left"
+            />
+            <Button
+              text="Default"
+              textColor="text-white"
+              isDisabled={false}
+              shadowStatus="shadow "
+              color="bg-blue-600"
+              weight="w-[105px]"
+              height="h-9"
+              icon={<AiOutlineDropbox className="mr-2" />}
+              iconPosition="right"
+            />
+            <Button
+              text="Default"
+              textColor="text-white"
+              isDisabled={false}
+              shadowStatus="shadow "
+              color="bg-blue-600"
+              weight="w-[105px]"
+              height="h-9"
+              icon={<AiOutlineDropbox className="ml-2" />}
               iconPosition="left"
             />
           </div>
@@ -325,9 +353,9 @@ function App() {
               isDisabled={true}
               shadowStatus="shadow "
               color="bg-red-800 "
-              weight="w-[81px]"
+              weight="w-[104px]"
               height="h-9"
-              iconPosition="left"
+              iconPosition="right"
             />
           </div>
           <div className="text-center">
